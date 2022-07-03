@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": "lq74-7m-wr-dosv",
+      "timestamp": "2022-7-3\t\t\t\t\t\t20:31:5",
+      "body": "Cooking",
+      "status": "Complete"
+    },
+    {
+      "id": "dthg-hx-3c-e6ik",
+      "timestamp": "2022-7-3\t\t\t\t\t\t20:32:12",
+      "body": "Gym",
+      "status": "Not complete"
+    },
+    {
+      "id": "azvx-nl-sv-3png",
+      "timestamp": "2022-7-3\t\t\t\t\t\t20:32:38",
+      "body": "Going for shopping",
+      "status": "Not complete"
+    },
+    {
+      "id": "4ydx-s1-sq-w7zt",
+      "timestamp": "2022-7-3\t\t\t\t\t\t20:44:44",
+      "body": "Doing the masterpiece JavaScript project\n",
+      "status": "Not complete"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
