@@ -6,7 +6,10 @@
   margin: 0;
   padding: 0;
 }
-
+img{
+  width: 600px;
+  height: auto;
+}
 .parent-div {
   display: flex;
 }

@@ -15,7 +15,7 @@ let Todos = [];
 
 const displayAllTodos = () => {
 	todoList.innerHTML = ""
-	axios.get("http://localhost:3000/posts").then(res => {	
+	axios.get("http://localhost:8000/posts").then(res => {	
 		Todos = [...res.data]
 		if (Todos.length == 0) {
 
@@ -64,7 +64,7 @@ const addTodo = () => {
 	const status = "Not complete";
 	if (body) {
 			axios
-					.post("http://localhost:3000/posts", { id, timestamp, body, status })
+					.post("http://localhost:8000/posts", { id, timestamp, body, status })
 					.then((res) => console.log(res.data))
 					.catch((err) => console.error(err));
 	// Todos.push({id,timestamp, body, status})
@@ -82,7 +82,7 @@ const editTodo = (itemId) => {
 	createTodoButton.style.display = "none";
 	updateTodoButton.style.display = "block";
 
-	axios.get(`http://localhost:3000/posts/${itemId}`).then((res) => {
+	axios.get(`http://localhost:8000/posts/${itemId}`).then((res) => {
 		(idField.value = res.data.id),
 			(timeField.value = res.data.timestamp),
 			(bodyField.value = res.data.body);
@@ -116,7 +116,7 @@ const addNewTodo = () => {
 };
 
 const deleteTodo = (itemId) => {
-	axios.delete(`http://localhost:3000/posts/${itemId}`);
+	axios.delete(`http://localhost:8000/posts/${itemId}`);
 };
 
 const closeAll = () => {
@@ -130,7 +130,7 @@ const updateTodo = () => {
 		const id = idField.value;
 		const timestamp = timeField.value;
 		const body = bodyField.value;
-		axios.patch(`http://localhost:3000/posts/${id}`, { id, timestamp, body });
+		axios.patch(`http://localhost:8000/posts/${id}`, { id, timestamp, body });
 
 		Todos = todos;
 		idField.value = "";
@@ -141,7 +141,7 @@ const updateTodo = () => {
 };
 
 const markTodoAsComplete = (itemId) => {
-	axios.patch(`http://localhost:3000/posts/${itemId}`, { status: "Complete" });
+	axios.patch(`http://localhost:8000/posts/${itemId}`, { status: "Complete" });
 };
 
 todoList.addEventListener("click", (e) => {
@@ -163,4 +163,4 @@ todoList.addEventListener("click", (e) => {
 addNewTodoButton.addEventListener('click', addNewTodo);
 createTodoButton.addEventListener('click', addTodo);
 updateTodoButton.addEventListener('click', updateTodo);
-closeIcon.addEventListener("click", closeAll);
+// closeIcon.addEventListener("click", closeAll);
