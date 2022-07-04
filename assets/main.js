@@ -132,7 +132,7 @@ const updateTodo = () => {
 		const body = bodyField.value;
 		axios.patch(`http://localhost:8000/posts/${id}`, { id, timestamp, body });
 
-		Todos = todos;
+		// Todos = todos;
 		idField.value = "";
 		timeField.value = "";
 		bodyField.value = "";
