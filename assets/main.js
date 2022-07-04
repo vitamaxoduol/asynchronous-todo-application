@@ -163,4 +163,3 @@ todoList.addEventListener("click", (e) => {
 addNewTodoButton.addEventListener('click', addNewTodo);
 createTodoButton.addEventListener('click', addTodo);
 updateTodoButton.addEventListener('click', updateTodo);
-closeIcon.addEventListener("click", closeAll);
